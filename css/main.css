@@ -1,0 +1,117 @@
+/* Style sheet compiled using Sass */
+* {
+  margin: 0;
+  padding: 0; }
+
+html, body {
+  height: 100%; }
+
+body {
+  background: black url(../img/binary.png);
+  font-family: Lato, Tahoma, sans-serif;
+  color: white; }
+
+.core {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto; }
+
+a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid #fae3b4; }
+  a:hover {
+    border-bottom: none; }
+
+b {
+  font-weight: 700; }
+
+h1 {
+  font: 1.5em Lato, Tahoma, sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 1em 0; }
+
+p {
+  margin: 1em 0; }
+
+header {
+  background: #437356;
+  height: 4em; }
+  header .icon-frame {
+    float: left; }
+  header .icon {
+    margin-left: 1em;
+    padding: .5em;
+    height: 3em; }
+  header .WIC {
+    float: left;
+    color: white;
+    font: 2em "Playfair Display", Helvetica, Georgia, serif;
+    padding: .25em; }
+    header .WIC .tag {
+      color: #333333;
+      font-family: Lato;
+      font-weight: bold; }
+    header .WIC .highlight {
+      -webkit-transition: color 0.15s ease-in;
+      -moz-webkit-transition: color 0.15s ease-in;
+      -o-webkit-transition: color 0.15s ease-in;
+      transition: color 0.15 ease-in; }
+    header .WIC:hover .highlight {
+      color: #aac789; }
+
+.wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -155px;
+  /* the bottom margin is the negative value of the footer's height */ }
+
+.footer, .push {
+  height: 155px;
+  /* .push must be the same height as .footer */ }
+
+.event-highlight {
+  background: #437356;
+  border-radius: 5px;
+  padding: 10px;
+  min-height: 5em;
+  position: relative;
+  color: white;
+  margin: 2em 0 1em 0; }
+  .event-highlight h1 {
+    margin: 0; }
+  .event-highlight p {
+    margin: .5em 0 1em 0;
+    font-weight: normal; }
+  .event-highlight .well {
+    background: #333333;
+    border-radius: 5px;
+    padding: 10px;
+    color: #f34a53;
+    text-align: center; }
+    .event-highlight .well i {
+      color: white;
+      display: inline-block;
+      margin: 0 .5em; }
+
+.news-update {
+  background: #fae3b4;
+  color: black;
+  border-radius: 5px;
+  padding-bottom: 10px;
+  margin: 1.5em 0; }
+  .news-update a {
+    border-bottom: 1px solid #437356; }
+    .news-update a:hover {
+      border-bottom: none; }
+  .news-update h2 {
+    color: white;
+    background: #437356;
+    font-family: Codystar, "Playfair Display", Helvetica, Georgia, serif;
+    border-radius: 5px 5px 0 0;
+    padding: 5px 5px 5px 10px;
+    font-weight: 300; }
+  .news-update p {
+    padding: 0 10px; }

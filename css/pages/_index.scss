@@ -1,0 +1,64 @@
+.event-highlight {
+	background: $green;
+	border-radius: 5px;
+	padding: 10px;
+	min-height: 5em;
+	position: relative;
+
+	color: white;
+
+	margin: 2em 0 1em 0;
+
+	h1 {
+		margin: 0;
+	}
+
+	p {
+			margin: .5em 0 1em 0;
+			font-weight: normal;
+	}
+
+	.well {
+		background: $gray;
+		border-radius: 5px;
+		padding: 10px;
+		color: $main-color;
+		text-align: center;
+
+		i {
+			color: white;
+			display: inline-block;
+			margin: 0 .5em;
+		}
+	}
+}
+
+.news-update {
+	background: $pale-yellow;
+	color: black;
+	border-radius: 5px;
+	padding-bottom: 10px;
+
+	margin: 1.5em 0;
+
+	a {
+		border-bottom: 1px solid $green;
+
+		&:hover {
+			border-bottom: none;
+		}
+	}
+
+	h2 {
+		color: white;
+		background: $green;
+		font-family: Codystar, $playfair-stack;
+		border-radius: 5px 5px 0 0;
+		padding: 5px 5px 5px 10px;
+		font-weight: 300;
+	}
+
+	p {
+		padding: 0 10px;
+	}
+}
