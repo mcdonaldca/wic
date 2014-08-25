@@ -1,0 +1,33 @@
+.event {
+	background: $green;
+	border-radius: 5px;
+	padding: 10px;
+	min-height: 5em;
+	position: relative;
+
+	color: white;
+
+	margin: 2em 0 1em 0;
+
+	h1 {
+		margin: 0;
+	}
+
+	p {
+			margin: .5em 0 1em 0;
+	}
+
+	.well {
+		background: $gray;
+		border-radius: 5px;
+		padding: 10px;
+		color: $pale-yellow;
+		text-align: center;
+
+		i {
+			color: white;
+			display: inline-block;
+			margin: 0 .5em;
+		}
+	}
+}

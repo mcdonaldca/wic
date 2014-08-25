@@ -1,0 +1,26 @@
+.update {
+	color: white;
+
+	margin: 1.5em 0 2.5em 0;
+
+	h2 {
+		color: white;
+		background: $green;
+		border-radius: 5px 5px 0 0;
+		padding: 5px 5px 5px 10px;
+		font-weight: 300;
+	}
+
+	h3 {
+		color: white;
+		background: $gray;
+		font-size: .8em;
+		padding: 5px 5px 5px 10px;
+		border-radius: 0 0 5px 5px;
+		font-weight: normal;
+	}
+
+	p {
+		padding: 0 10px;
+	}
+}
