@@ -23,7 +23,7 @@ body {
 	margin: 0 auto;
 
 	&.nav-visible {
-		padding-top: 10.5em;
+		padding-top: 11.25em;
 	}
 }
 
@@ -53,7 +53,7 @@ h1 {
 }
 
 p {
-	font: 1em $lato-stack;
+	font: .9em $open-sans-stack;
 	font-weight: 400;
 	margin: 1em 0;
 
@@ -115,9 +115,17 @@ li {
 //	HEADER STYLES
 //------------------------------
 
+.triangles {
+	height: 6em;
+  background: $pink url(../img/triangles.png) repeat right top;
+  background-size: 150px 135px;
+}
+
 header {
 	background: $green;
-	height: 4em;
+	border-top: 3px $pink solid;
+	border-bottom: 3px $pink solid;
+	height: 4.1em;
 
 	a {
 			border-bottom: none;
@@ -137,7 +145,8 @@ header {
 		float: left;
 		color: white;
 		font: 2em $playfair-stack;
-		padding: .25em;
+		font-weight: 700;
+		padding: 0 .25em;
 
 		.tag {
 			color: $gray;
@@ -160,6 +169,15 @@ header {
 				color: $light-green;
 			}
 		}
+
+		.at {
+			font: .4em $open-sans-stack;
+			font-weight: 400;
+			text-align: center;
+			margin-top: -.1em;
+			padding-right: 2.5em;
+			color: $light-green;
+		}
 	}
 
 	nav {
@@ -167,7 +185,7 @@ header {
 		.mobile-nav {
 			float: right;
 			display: none;
-			padding: 1em 1em 0 0;
+			padding: 1.05em 1em 0 0;
 		}
 
 		ul.desktop {
@@ -188,6 +206,11 @@ header {
 
 				&:hover {
 					background: darken($light-green, 10%);
+				}
+
+				a {
+					display: inline-block;
+					width: 100%;
 				}
 			}
 		}

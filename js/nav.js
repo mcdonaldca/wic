@@ -1,12 +1,12 @@
 function adjustNav () {
-	if ( $(window).width() < 900 ) {
+	if ( $(window).width() < 1024 ) {
 		$(".mobile-nav").css("display", "block");
 		$("nav ul").css("display", "none").removeClass("desktop").addClass("mobile");
 	} else {
 		$(".mobile-nav").css("display", "none");
 		$("nav ul").css("display", "block").removeClass("mobile").addClass("desktop");
-		$(".core").removeClass("nav-visible");
 	}
+	$(".core").removeClass("nav-visible");
 }
 
 // Adjust nav appearance initially

@@ -16,7 +16,7 @@ body {
   max-width: 1000px;
   margin: 0 auto; }
   .core.nav-visible {
-    padding-top: 10.5em; }
+    padding-top: 11.25em; }
 
 a {
   color: inherit;
@@ -38,7 +38,7 @@ h1 {
     margin-bottom: 1em; }
 
 p {
-  font: 1em Lato, Tahoma, sans-serif;
+  font: 0.9em "Open Sans", Tahoma, sans-serif;
   font-weight: 400;
   margin: 1em 0; }
   p b {
@@ -77,9 +77,16 @@ li {
 .icon-calendar:before {
   content: "\e602"; }
 
+.triangles {
+  height: 6em;
+  background: #f34a53 url(../img/triangles.png) repeat right top;
+  background-size: 150px 135px; }
+
 header {
   background: #437356;
-  height: 4em; }
+  border-top: 3px #f34a53 solid;
+  border-bottom: 3px #f34a53 solid;
+  height: 4.1em; }
   header a {
     border-bottom: none; }
   header .logo-frame {
@@ -92,7 +99,8 @@ header {
     float: left;
     color: white;
     font: 2em "Playfair Display", Helvetica, Georgia, serif;
-    padding: .25em; }
+    font-weight: 700;
+    padding: 0 .25em; }
     header .WIC .tag {
       color: #333333;
       font-family: Lato;
@@ -104,13 +112,20 @@ header {
       -webkit-transition: color 0.15s ease-in;
       -moz-webkit-transition: color 0.15s ease-in;
       -o-webkit-transition: color 0.15s ease-in;
-      transition: color 0.15 ease-in; }
+      transition: color 0.15s ease-in; }
     header .WIC:hover .highlight {
+      color: #aac789; }
+    header .WIC .at {
+      font: 0.4em "Open Sans", Tahoma, sans-serif;
+      font-weight: 400;
+      text-align: center;
+      margin-top: -.1em;
+      padding-right: 2.5em;
       color: #aac789; }
   header nav .mobile-nav {
     float: right;
     display: none;
-    padding: 1em 1em 0 0; }
+    padding: 1.05em 1em 0 0; }
   header nav ul.desktop {
     float: right;
     margin-top: 1.1em; }
@@ -124,9 +139,12 @@ header {
       -webkit-transition: background 0.15s ease-in;
       -moz-webkit-transition: background 0.15s ease-in;
       -o-webkit-transition: background 0.15s ease-in;
-      transition: background 0.15 ease-in; }
+      transition: background 0.15s ease-in; }
       header nav ul.desktop li:hover {
         background: #91b766; }
+      header nav ul.desktop li a {
+        display: inline-block;
+        width: 100%; }
   header nav ul.mobile {
     padding: 0;
     margin: 0;
@@ -143,7 +161,7 @@ header {
       -webkit-transition: background 0.15s ease-in;
       -moz-webkit-transition: background 0.15s ease-in;
       -o-webkit-transition: background 0.15s ease-in;
-      transition: background 0.15 ease-in; }
+      transition: background 0.15s ease-in; }
       header nav ul.mobile li a {
         display: inline-block;
         width: 100%; }
@@ -198,15 +216,15 @@ footer {
       -webkit-transition: filter 0.15s ease-in;
       -moz-webkit-transition: filter 0.15s ease-in;
       -o-webkit-transition: filter 0.15s ease-in;
-      transition: filter 0.15 ease-in;
+      transition: filter 0.15s ease-in;
       -webkit-transition: -webkit-filter 0.15s ease-in;
       -moz-webkit-transition: -webkit-filter 0.15s ease-in;
       -o-webkit-transition: -webkit-filter 0.15s ease-in;
-      transition: -webkit-filter 0.15 ease-in;
+      transition: -webkit-filter 0.15s ease-in;
       -webkit-transition: -moz-filter 0.15s ease-in;
       -moz-webkit-transition: -moz-filter 0.15s ease-in;
       -o-webkit-transition: -moz-filter 0.15s ease-in;
-      transition: -moz-filter 0.15 ease-in; }
+      transition: -moz-filter 0.15s ease-in; }
       footer table img:hover {
         -webkit-filter: grayscale(0%);
         -moz-filter: grayscale(0%);
@@ -255,7 +273,7 @@ footer, .push {
     background: #437356;
     border-radius: 5px 5px 0 0;
     padding: 5px 5px 5px 10px;
-    font-weight: 300; }
+    font-weight: 400; }
   .update h3 {
     color: white;
     background: #333333;
@@ -265,3 +283,8 @@ footer, .push {
     font-weight: normal; }
   .update p {
     padding: 0 10px; }
+
+ul.year-selection {
+  list-style: none; }
+  ul.year-selection li {
+    display: inline-block; }

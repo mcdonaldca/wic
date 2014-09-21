@@ -18,6 +18,10 @@ function makeDate($date) {
     $day .= $info[2] . "th";
   }
   
+  if ( $day[1] === "0" ) {
+    $day = " " . substr($day, 2);
+  }
+  
 	return $month . $day . $year;
 }
 

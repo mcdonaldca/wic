@@ -1,18 +1,61 @@
-  <?php require("assets/header.html"); ?>
+  <?php require("assets/config.php");
+        require("assets/header.php"); ?>
 
  	<div class="core">
- 		<div class="event-highlight">
- 			<h1>TechSmith Tech Talk</h1>
- 			<p>Pour-over yr keytar, letterpress leggings tattooed literally fanny pack deep v Tonx cliche. Distillery banjo Brooklyn Helvetica High Life, Tonx chillwave single-origin coffee fingerstache.</p>
- 			<div class="well">5:00 PM <i>//</i> 3105 EB <i>//</i> Tuesday, January 28th, 2014</div>
- 		</div>
-
- 		<div class="event-highlight">
- 			<h1>TechSmith Tech Talk</h1>
- 			<p>Pour-over yr keytar, letterpress leggings tattooed literally fanny pack deep v Tonx cliche. Distillery banjo Brooklyn Helvetica High Life, Tonx chillwave single-origin coffee fingerstache.</p>
- 			<div class="well">5:00 PM <i>//</i> 3105 EB <i>//</i> Tuesday, January 28th, 2014</div>
- 		</div>
+ 		<h1>Events</h1>
  		
+ 		<?php // Legacy code from old website
+ 		      // It works, so let's leave it for now
+
+ 					date_default_timezone_set("America/New_York");
+ 					if (!isset($calendarfeed)) {
+            $calendarfeed = "http://www.google.com/calendar/feeds/gl14p7hs5lrvektk0ou7apjgcs%40group.calendar.google.com/private-8f80df2cb73c9f74d80fbe228f10ed16/basic";
+          }
+			
+			    $dateformat="M j, Y";
+			    $timeformat="g:i a";
+			    $GroupByDate=true;
+			    $offset = 4;
+
+			    $calendar_xml_address = str_replace("/basic", 
+			       																	"/full?singleevents=true&futureevents=true&orderby=starttime&sortorder=a", 
+			       																	$calendarfeed);
+   				$xml = simplexml_load_file($calendar_xml_address);
+
+   				$first = true;
+
+			    foreach ($xml->entry as $entry)
+			    {
+			    	  // Ignore any e-board meetings
+			        $title = $entry->title;
+			        if(stripos($title, "e-board") !== FALSE || stripos($title, "eboard") !== FALSE){
+			            if(stripos($title, "elections") === FALSE) continue;
+			        }
+
+			        $ns_gd = $entry->children('http://schemas.google.com/g/2005');
+			        // Makes links clickable
+			        $description = preg_replace('(((f|ht){1}tp://)[-a-zA-Z0-9@:%_\+.~#?,&//=]+)','<a href="\\1">\\1</a>',
+			            												$entry->content); 
+			        // Makes email addresses into email addresses
+			        $description = preg_replace('([_.0-9a-z-]+@([0-9a-z][0-9a-z-]+\.)+[a-z]{2,3})','<a href="mailto:\\1">\\1</a>',
+			            												$description);
+
+			        $date = date($dateformat, strtotime($ns_gd->when->attributes()->startTime));
+			        $time = date($timeformat, strtotime($ns_gd->when->attributes()->startTime));
+			        $where = $ns_gd->where->attributes()->valueString;
+			        $link = $entry->link->attributes()->href; ?>
+
+        <div class="event">
+					<h1><? if ($first) echo('Next Event: ') ?><?= $title ?> &nbsp;&nbsp;<a href="<?= $link ?>"><span class="icon icon-calendar"></span></a></h1>
+					<p><?= $description ?></p>
+					<div class="well"><?= $time ?> <i>//</i> <?= $where ?> <i>//</i> <?= $date ?></div>
+				</div>
+			        
+			  <?php $first = false; } ?><br>
+
+		
+
+  
  	</div><div class="push"></div></div>
 
  	<?php require("assets/footer.html"); ?>
