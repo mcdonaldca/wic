@@ -177,6 +177,14 @@ header {
 			margin-top: -.1em;
 			padding-right: 2.5em;
 			color: $light-green;
+
+			@media screen and (max-width: 600px) {
+				padding-right: 1em;
+
+				.mobile-hide {
+					display: none;
+				}
+			}
 		}
 	}
 
@@ -195,7 +203,7 @@ header {
 			li {
 				display: inline-block;
 				background: $light-green;
-				
+
 				-webkit-border-radius: 5px;
 				-moz-border-radius: 5px;
 				border-radius: 5px;
@@ -220,11 +228,12 @@ header {
 
 		ul.mobile {
 			padding: 0;
-			margin: 0;
+			margin: -2px 0 0 0;
 			float: left;
 			width: 100%;
 			background: $gray;
 			display: block;
+			border-bottom: 3px $pink solid;
 
 			li {
 				width: 100%;

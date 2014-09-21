@@ -122,6 +122,11 @@ header {
       margin-top: -.1em;
       padding-right: 2.5em;
       color: #aac789; }
+      @media screen and (max-width: 600px) {
+        header .WIC .at {
+          padding-right: 1em; }
+          header .WIC .at .mobile-hide {
+            display: none; } }
   header nav .mobile-nav {
     float: right;
     display: none;
@@ -149,11 +154,12 @@ header {
         width: 100%; }
   header nav ul.mobile {
     padding: 0;
-    margin: 0;
+    margin: -2px 0 0 0;
     float: left;
     width: 100%;
     background: #333333;
-    display: block; }
+    display: block;
+    border-bottom: 3px #f34a53 solid; }
     header nav ul.mobile li {
       width: 100%;
       list-style: none;

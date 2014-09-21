@@ -18,7 +18,7 @@
  		<div class="logo-frame"><a href="index.php"><img class="logo" src="img/icon.png" alt="Women in Computing logo"></a></div>
  		<div class="WIC">
       <span class="tag">&lt;</span><span class="highlight">W</span><span class="mobile-hide">omen </span><span class="highlight">I</span><span class="mobile-hide">n </span><span class="highlight">C</span><span class="mobile-hide">omputing</span> <span class="tag">/&gt;</span>
-      <div class="at">@ Michigan State University</div>
+      <div class="at">@ M<span class="mobile-hide">ichigan </span>S<span class="mobile-hide">tate </span>U<span class="mobile-hide">niversity</span></div>
     </div>
  		<nav>
  			<div class="mobile-nav"><a><span class="icon icon-nav"></span></a></div>
