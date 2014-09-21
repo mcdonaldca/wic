@@ -132,6 +132,8 @@ header {
     header nav ul.desktop li {
       display: inline-block;
       background: #aac789;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
       border-radius: 5px;
       margin: 0 1em 0 0;
       padding: .3em .7em .4em .7em;
@@ -285,6 +287,32 @@ footer, .push {
     padding: 0 10px; }
 
 ul.year-selection {
-  list-style: none; }
+  list-style: none;
+  padding-left: 0; }
   ul.year-selection li {
     display: inline-block; }
+    ul.year-selection li a {
+      display: block;
+      text-align: center;
+      border: none;
+      background: #aac789;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      margin: 0 1em 0 0;
+      padding: .3em .7em .4em .7em;
+      color: #1e4147;
+      -webkit-transition: color 0.15s ease-in;
+      -moz-webkit-transition: color 0.15s ease-in;
+      -o-webkit-transition: color 0.15s ease-in;
+      transition: color 0.15s ease-in;
+      -webkit-transition: background 0.15s ease-in;
+      -moz-webkit-transition: background 0.15s ease-in;
+      -o-webkit-transition: background 0.15s ease-in;
+      transition: background 0.15s ease-in; }
+      ul.year-selection li a:hover {
+        background: #437356;
+        color: #aac789; }
+      ul.year-selection li a.highlighted {
+        background: #1e4147;
+        color: #aac789; }

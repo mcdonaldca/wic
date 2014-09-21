@@ -27,8 +27,39 @@
 
 ul.year-selection {
 	list-style: none;
+	padding-left: 0;
 
 	li {
 		display: inline-block;
+
+		a {
+			display: block;
+			text-align: center;
+			border: none;
+			background: $light-green;
+				
+			-webkit-border-radius: 5px;
+			-moz-border-radius: 5px;
+			border-radius: 5px;
+
+			margin: 0 1em 0 0;
+			padding: .3em .7em .4em .7em;
+
+			color: $blue;
+
+			@include transition(color);
+			@include transition(background);
+			
+
+			&:hover {
+				background: $green;
+				color: $light-green;
+			}
+
+			&.highlighted {
+				background: $blue;
+				color: $light-green;
+			}
+		}
 	}
 }

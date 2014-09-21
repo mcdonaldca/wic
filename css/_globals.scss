@@ -195,6 +195,9 @@ header {
 			li {
 				display: inline-block;
 				background: $light-green;
+				
+				-webkit-border-radius: 5px;
+				-moz-border-radius: 5px;
 				border-radius: 5px;
 
 				margin: 0 1em 0 0;

@@ -22,10 +22,11 @@
  	<h1>News Archive</h1>
  	<p>Sort by year</p>
  	<ul class="year-selection">
- 	<?php $year = $currYear;
+ 		<li><a class='select-year highlighted' id='select-<?= $currYear ?>' href='#' onclick='toggle(<?= $currYear ?>); return false;'><?= $currYear ?></a></li>
+ 	<?php $year = $currYear - 1;
 				while ($startYear <= $year)
 				{
-					echo "<li><a href='#' onclick='toggle($year); return false;'>$year</a></li>";
+					echo "<li><a class='select-year' id='select-$year' href='#' onclick='toggle($year); return false;'>$year</a></li>";
 					$year--;
 				} ?> 
 	</ul><br>
@@ -76,6 +77,8 @@
 		{
 			$(".yearDiv").slideUp("fast");
 			$("#" + divId).slideDown("slow");
+			$('.select-year').removeClass("highlighted");
+			$('#select-' + divId).addClass("highlighted");
 		}
 	
 	</script>
