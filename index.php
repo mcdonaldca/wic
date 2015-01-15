@@ -32,7 +32,7 @@
 			    {
 			    	  // Ignore any e-board meetings
 			        $title = $entry->title;
-			        if(stripos($title, "e-board") !== FALSE || stripos($title, "eboard") !== FALSE){
+			        if(stripos($title, "e-board") !== FALSE || stripos($title, "eboard") !== FALSE || stripos($title, "canceled") !== FALSE){
 			            if(stripos($title, "elections") === FALSE) continue;
 			        }
 
@@ -53,16 +53,16 @@
 				?>
 
 		<div class="event">
-			<h1>Next Event: <?= $title ?> &nbsp;&nbsp;<a href="<?= $link ?>"><span class="icon icon-calendar"></span></a></h1>
+			<h1>Next Event: <a href='<?= $link ?>'><?= $title ?></a></h1>
 			<p><?= $description ?></p>
 			<div class="well"><?= $time ?> <i>//</i> <?= $where ?> <i>//</i> <?= $date ?></div>
 		</div>
 
  		<h1>What is Women in Computing?</h1>
- 		<p>Michigan State Univeristy Women in Computing (MSU WIC) is an organization of students and faculty (both men and women) who work to recruit, support and retain women in computing fields. If you are interested in computing, we would love to see you at our next meeting.</p>
+ 		<p>Michigan State University Women in Computing (MSU WIC) is an organization of students and faculty (both men and women) who work to recruit, support and retain women in computing fields. If you are interested in computing, we would love to see you at our next meeting.</p>
  		<p>We host many events during the semester, including tech talks from visiting companies (every other Thursday), hackathons, Girl Scout workshops, web development workshops, and more. Check out our <a href="events.php">calendar</a> to keep up to date.</p>
 
- 		<h1>Recent News &nbsp;&nbsp;<a href="news.php"><span class="icon icon-news"></span></a></h1>
+ 		<h1>Recent News</h1>
  		<?php $query = "SELECT * FROM newsFeed WHERE title != '' ORDER BY date DESC LIMIT 3";
  		      $rows = $mysqli->query($query);
  		      foreach($rows as $row) {

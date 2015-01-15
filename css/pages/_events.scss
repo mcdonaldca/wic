@@ -1,5 +1,7 @@
 .event {
 	background: $green;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
 	border-radius: 5px;
 	padding: 10px;
 	min-height: 5em;
@@ -19,6 +21,8 @@
 
 	.well {
 		background: $gray;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
 		border-radius: 5px;
 		padding: 10px;
 		color: $pale-yellow;

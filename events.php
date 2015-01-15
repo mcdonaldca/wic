@@ -3,6 +3,7 @@
 
  	<div class="core">
  		<h1>Events</h1>
+ 		<p>(<a href="https://www.google.com/calendar/render?cid=gl14p7hs5lrvektk0ou7apjgcs%40group.calendar.google.com">Add to your Google Calendar</a>)</p>
  		
  		<?php // Legacy code from old website
  		      // It works, so let's leave it for now
@@ -28,7 +29,7 @@
 			    {
 			    	  // Ignore any e-board meetings
 			        $title = $entry->title;
-			        if(stripos($title, "e-board") !== FALSE || stripos($title, "eboard") !== FALSE){
+			        if(stripos($title, "e-board") !== FALSE || stripos($title, "eboard") !== FALSE || stripos($title, "canceled") !== FALSE){
 			            if(stripos($title, "elections") === FALSE) continue;
 			        }
 
@@ -46,7 +47,7 @@
 			        $link = $entry->link->attributes()->href; ?>
 
         <div class="event">
-					<h1><? if ($first) echo('Next Event: ') ?><?= $title ?> &nbsp;&nbsp;<a href="<?= $link ?>"><span class="icon icon-calendar"></span></a></h1>
+					<h1><? if ($first) echo('Next Event: ') ?><a href='<?= $link ?>'><?= $title ?></a></h1>
 					<p><?= $description ?></p>
 					<div class="well"><?= $time ?> <i>//</i> <?= $where ?> <i>//</i> <?= $date ?></div>
 				</div>

@@ -1,0 +1,31 @@
+.member {
+	margin: 1em 0;
+	height: 7em;
+	position: relative;
+
+	.photo {
+		display: inline-block;
+		width: 7em;
+		height: 100%;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+
+		background: $green;
+  	background-size: 150px 135px;
+
+  	img {
+  		width: 6em;
+  		height: 6em;
+  		margin: .5em;
+  	}
+	}
+
+	.info {
+		position: absolute;
+		top: 0;
+		padding-left: 2em;
+		height: 100%;
+		display: inline-block;
+	}
+}

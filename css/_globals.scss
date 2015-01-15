@@ -52,6 +52,12 @@ h1 {
 	}
 }
 
+h2 {
+	font: 1.25em $lato-stack;
+	font-weight: 700;
+	letter-spacing: 1px;
+}
+
 p {
 	font: .9em $open-sans-stack;
 	font-weight: 400;
@@ -117,15 +123,16 @@ li {
 
 .triangles {
 	height: 6em;
-  background: $pink url(../img/triangles.png) repeat right top;
-  background-size: 150px 135px;
+  background: $pink url(../img/triangles_larger.png) repeat right top;
+  background-size: 200px 181px;
 }
 
 header {
 	background: $green;
 	border-top: 3px $pink solid;
 	border-bottom: 3px $pink solid;
-	height: 4.1em;
+	height: 5em;
+	// height: 4.1em;
 
 	a {
 			border-bottom: none;
@@ -138,13 +145,15 @@ header {
 	.logo {
 		margin-left: 1em;
 		padding: .5em;
-		height: 3em;
+		// height: 3em;
+		height: 3.8em;
 	}
 
 	.WIC {
 		float: left;
 		color: white;
-		font: 2em $playfair-stack;
+		// font: 2em $playfair-stack;
+		font: 2.4em $playfair-stack;
 		font-weight: 700;
 		padding: 0 .25em;
 
@@ -198,7 +207,8 @@ header {
 
 		ul.desktop {
 			float: right;			
-			margin-top: 1.1em;
+			// margin-top: 1.1em;
+			margin-top: 1.5em;
 
 			li {
 				display: inline-block;

@@ -37,6 +37,11 @@ h1 {
     text-align: center;
     margin-bottom: 1em; }
 
+h2 {
+  font: 1.25em Lato, Tahoma, sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px; }
+
 p {
   font: 0.9em "Open Sans", Tahoma, sans-serif;
   font-weight: 400;
@@ -79,14 +84,14 @@ li {
 
 .triangles {
   height: 6em;
-  background: #f34a53 url(../img/triangles.png) repeat right top;
-  background-size: 150px 135px; }
+  background: #f34a53 url(../img/triangles_larger.png) repeat right top;
+  background-size: 200px 181px; }
 
 header {
   background: #437356;
   border-top: 3px #f34a53 solid;
   border-bottom: 3px #f34a53 solid;
-  height: 4.1em; }
+  height: 5em; }
   header a {
     border-bottom: none; }
   header .logo-frame {
@@ -94,11 +99,11 @@ header {
   header .logo {
     margin-left: 1em;
     padding: .5em;
-    height: 3em; }
+    height: 3.8em; }
   header .WIC {
     float: left;
     color: white;
-    font: 2em "Playfair Display", Helvetica, Georgia, serif;
+    font: 2.4em "Playfair Display", Helvetica, Georgia, serif;
     font-weight: 700;
     padding: 0 .25em; }
     header .WIC .tag {
@@ -133,7 +138,7 @@ header {
     padding: 1.05em 1em 0 0; }
   header nav ul.desktop {
     float: right;
-    margin-top: 1.1em; }
+    margin-top: 1.5em; }
     header nav ul.desktop li {
       display: inline-block;
       background: #aac789;
@@ -252,6 +257,8 @@ footer, .push {
 
 .event {
   background: #437356;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
   border-radius: 5px;
   padding: 10px;
   min-height: 5em;
@@ -264,6 +271,8 @@ footer, .push {
     margin: .5em 0 1em 0; }
   .event .well {
     background: #333333;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
     border-radius: 5px;
     padding: 10px;
     color: #fae3b4;
@@ -279,6 +288,8 @@ footer, .push {
   .update h2 {
     color: white;
     background: #437356;
+    -webkit-border-radius: 5px 5px 0 0;
+    -moz-border-radius: 5px 5px 0 0;
     border-radius: 5px 5px 0 0;
     padding: 5px 5px 5px 10px;
     font-weight: 400; }
@@ -287,6 +298,8 @@ footer, .push {
     background: #333333;
     font-size: .8em;
     padding: 5px 5px 5px 10px;
+    -webkit-border-radius: 0 0 5px 5px;
+    -moz-border-radius: 0 0 5px 5px;
     border-radius: 0 0 5px 5px;
     font-weight: normal; }
   .update p {
@@ -322,3 +335,27 @@ ul.year-selection {
       ul.year-selection li a.highlighted {
         background: #1e4147;
         color: #aac789; }
+
+.member {
+  margin: 1em 0;
+  height: 7em;
+  position: relative; }
+  .member .photo {
+    display: inline-block;
+    width: 7em;
+    height: 100%;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background: #437356;
+    background-size: 150px 135px; }
+    .member .photo img {
+      width: 6em;
+      height: 6em;
+      margin: .5em; }
+  .member .info {
+    position: absolute;
+    top: 0;
+    padding-left: 2em;
+    height: 100%;
+    display: inline-block; }
